@@ -52,7 +52,7 @@ npm install
 ### `npm start`
 
 개발 모드로 앱을 실행합니다.  
-[http://localhost:3000](http://localhost:3000)을 열어서 브라우저에서 확인할 수 있습니다.
+[http://localhost:3004/game](http://localhost:3004/game)을 열어서 브라우저에서 확인할 수 있습니다.
 
 코드를 수정하면 페이지가 자동으로 새로고침됩니다.  
 콘솔에서 lint 오류도 확인할 수 있습니다.
