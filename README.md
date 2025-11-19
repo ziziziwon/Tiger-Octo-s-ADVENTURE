@@ -1,46 +1,127 @@
-# Getting Started with Create React App
+# 🐯🐙 Tiger Octo's Adventure
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Tiger Octo's Adventure** is an interactive web experience combining pixel art aesthetics, motion design, and immersive storytelling through React and Three.js (R3F).
 
-## Available Scripts
+## ✨ Features
 
-In the project directory, you can run:
+- 🎮 **Interactive Mini-Games**
+  - Star Catcher Game
+  - Rain Memory Game
+  - Item Catch Game
+
+- 🎨 **Visual Effects**
+  - Light Bloom Effects
+  - Parallax Background
+  - Rain & Sparkle Effects
+
+- 📖 **Story Elements**
+  - Multiple Scene Transitions
+  - Emotion Log System
+  - Memory Collection System
+  - Interactive Invite Cards
+
+- 🖼️ **Gallery & Collections**
+  - Collectible Items
+  - Behind the Scene Content
+  - Reward System with Modals
+
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: React 18 with TypeScript
+- **3D Rendering**: React Three Fiber (R3F)
+- **Styling**: Tailwind CSS
+- **State Management**: Zustand
+- **Animation**: Framer Motion
+- **Build Tool**: Create React App
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/ziziziwon/Tiger-Octo-s-ADVENTURE.git
+
+# Navigate to project directory
+cd Tiger-Octo-s-ADVENTURE
+
+# Install dependencies
+npm install
+```
+
+## 🚀 Available Scripts
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in development mode.  
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
+The page will reload if you make edits.  
 You will also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches the test runner in interactive watch mode.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder.  
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The build is minified and the filenames include the hashes.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Project Structure
 
-### `npm run eject`
+```
+src/
+├── components/
+│   ├── effects/          # Visual effects components
+│   ├── minigames/        # Interactive game components
+│   ├── LandingPage.tsx   # Main landing page
+│   ├── GamePage.tsx      # Game interface
+│   ├── GalleryPage.tsx   # Gallery view
+│   └── ...
+├── store/
+│   ├── memoryStore.ts    # Memory state management
+│   └── useSceneStore.ts  # Scene transition state
+├── data/
+│   └── scenes.ts         # Scene configuration data
+├── utils/
+│   └── posterGenerator.ts # Utility functions
+└── theme.ts              # Theme configuration
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 🎯 Key Components
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **MemoryStage**: Main game stage with memory collection mechanics
+- **InviteScene**: Interactive invitation card system
+- **SceneLoader**: Dynamic scene transition manager
+- **ProgressBar**: Visual progress tracking
+- **RewardModal**: Achievement and reward display
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 📚 Documentation
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- [Tiger's Invite Guide](./TIGERS_INVITE_GUIDE.md)
+- [Debug Layers Reference](./DEBUG_LAYERS.md)
 
-## Learn More
+## 🎨 Design Philosophy
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This project combines:
+- **Pixel Art Aesthetics**: Nostalgic visual style
+- **Motion Design**: Smooth animations and transitions
+- **Interactive Storytelling**: User-driven narrative experience
+- **Character-Driven Experience**: Focused on Tiger Octo's journey
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.
+
+## 👤 Author
+
+**ziziziwon**
+
+---
+
+Made with ❤️ for Tiger Octo's Adventure
