@@ -1,127 +1,135 @@
-# 🐯🐙 Tiger Octo's Adventure
+# 🐯🐙 호랑이 문어의 모험 (Tiger Octo's Adventure)
 
-**Tiger Octo's Adventure** is an interactive web experience combining pixel art aesthetics, motion design, and immersive storytelling through React and Three.js (R3F).
+**호랑이 문어의 모험**은 픽셀 아트 미학, 모션 디자인, 그리고 몰입감 있는 스토리텔링을 결합한 인터랙티브 웹 경험입니다. React와 Three.js(R3F)를 활용하여 제작되었습니다.
 
-## ✨ Features
+## ✨ 주요 기능
 
-- 🎮 **Interactive Mini-Games**
-  - Star Catcher Game
-  - Rain Memory Game
-  - Item Catch Game
+- 🎮 **인터랙티브 미니게임**
+  - 별 잡기 게임
+  - 빗방울 기억 게임
+  - 아이템 캐치 게임
 
-- 🎨 **Visual Effects**
-  - Light Bloom Effects
-  - Parallax Background
-  - Rain & Sparkle Effects
+- 🎨 **비주얼 이펙트**
+  - 라이트 블룸 효과
+  - 패럴랙스 배경
+  - 빗방울 & 반짝임 효과
 
-- 📖 **Story Elements**
-  - Multiple Scene Transitions
-  - Emotion Log System
-  - Memory Collection System
-  - Interactive Invite Cards
+- 📖 **스토리 요소**
+  - 다양한 장면 전환
+  - 감정 로그 시스템
+  - 추억 수집 시스템
+  - 인터랙티브 초대장 카드
 
-- 🖼️ **Gallery & Collections**
-  - Collectible Items
-  - Behind the Scene Content
-  - Reward System with Modals
+- 🖼️ **갤러리 & 컬렉션**
+  - 수집 가능한 아이템
+  - 비하인드 씬 콘텐츠
+  - 보상 시스템과 모달
 
-## 🛠️ Tech Stack
+## 🛠️ 기술 스택
 
-- **Frontend Framework**: React 18 with TypeScript
-- **3D Rendering**: React Three Fiber (R3F)
-- **Styling**: Tailwind CSS
-- **State Management**: Zustand
-- **Animation**: Framer Motion
-- **Build Tool**: Create React App
+- **프론트엔드 프레임워크**: React 18 with TypeScript
+- **3D 렌더링**: React Three Fiber (R3F)
+- **스타일링**: Tailwind CSS
+- **상태 관리**: Zustand
+- **애니메이션**: Framer Motion
+- **빌드 도구**: Create React App
 
-## 📦 Installation
+## 📦 설치 방법
 
 ```bash
-# Clone the repository
+# 저장소 클론
 git clone https://github.com/ziziziwon/Tiger-Octo-s-ADVENTURE.git
 
-# Navigate to project directory
+# 프로젝트 디렉토리로 이동
 cd Tiger-Octo-s-ADVENTURE
 
-# Install dependencies
+# 의존성 설치
 npm install
 ```
 
-## 🚀 Available Scripts
+## 🚀 실행 명령어
 
 ### `npm start`
 
-Runs the app in development mode.  
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+개발 모드로 앱을 실행합니다.  
+[http://localhost:3000](http://localhost:3000)을 열어서 브라우저에서 확인할 수 있습니다.
 
-The page will reload if you make edits.  
-You will also see any lint errors in the console.
+코드를 수정하면 페이지가 자동으로 새로고침됩니다.  
+콘솔에서 lint 오류도 확인할 수 있습니다.
 
 ### `npm test`
 
-Launches the test runner in interactive watch mode.
+인터랙티브 watch 모드로 테스트 러너를 실행합니다.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.  
-It correctly bundles React in production mode and optimizes the build for the best performance.
+프로덕션용 앱을 `build` 폴더에 빌드합니다.  
+React를 프로덕션 모드로 정확하게 번들링하고 최상의 성능을 위해 최적화합니다.
 
-The build is minified and the filenames include the hashes.
+빌드는 최소화되며 파일 이름에 해시가 포함됩니다.
 
-## 📁 Project Structure
+## 📁 프로젝트 구조
 
 ```
 src/
 ├── components/
-│   ├── effects/          # Visual effects components
-│   ├── minigames/        # Interactive game components
-│   ├── LandingPage.tsx   # Main landing page
-│   ├── GamePage.tsx      # Game interface
-│   ├── GalleryPage.tsx   # Gallery view
+│   ├── effects/          # 비주얼 이펙트 컴포넌트
+│   ├── minigames/        # 인터랙티브 게임 컴포넌트
+│   ├── LandingPage.tsx   # 메인 랜딩 페이지
+│   ├── GamePage.tsx      # 게임 인터페이스
+│   ├── GalleryPage.tsx   # 갤러리 뷰
 │   └── ...
 ├── store/
-│   ├── memoryStore.ts    # Memory state management
-│   └── useSceneStore.ts  # Scene transition state
+│   ├── memoryStore.ts    # 메모리 상태 관리
+│   └── useSceneStore.ts  # 장면 전환 상태
 ├── data/
-│   └── scenes.ts         # Scene configuration data
+│   └── scenes.ts         # 장면 설정 데이터
 ├── utils/
-│   └── posterGenerator.ts # Utility functions
-└── theme.ts              # Theme configuration
+│   └── posterGenerator.ts # 유틸리티 함수
+└── theme.ts              # 테마 설정
 ```
 
-## 🎯 Key Components
+## 🎯 주요 컴포넌트
 
-- **MemoryStage**: Main game stage with memory collection mechanics
-- **InviteScene**: Interactive invitation card system
-- **SceneLoader**: Dynamic scene transition manager
-- **ProgressBar**: Visual progress tracking
-- **RewardModal**: Achievement and reward display
+- **MemoryStage**: 추억 수집 메커니즘이 있는 메인 게임 스테이지
+- **InviteScene**: 인터랙티브 초대장 카드 시스템
+- **SceneLoader**: 동적 장면 전환 관리자
+- **ProgressBar**: 시각적 진행 상황 추적
+- **RewardModal**: 업적 및 보상 표시
 
-## 📚 Documentation
+## 📚 문서
 
-- [Tiger's Invite Guide](./TIGERS_INVITE_GUIDE.md)
-- [Debug Layers Reference](./DEBUG_LAYERS.md)
+- [타이거 초대장 가이드](./TIGERS_INVITE_GUIDE.md)
+- [디버그 레이어 참고자료](./DEBUG_LAYERS.md)
 
-## 🎨 Design Philosophy
+## 🎨 디자인 철학
 
-This project combines:
-- **Pixel Art Aesthetics**: Nostalgic visual style
-- **Motion Design**: Smooth animations and transitions
-- **Interactive Storytelling**: User-driven narrative experience
-- **Character-Driven Experience**: Focused on Tiger Octo's journey
+이 프로젝트는 다음을 결합합니다:
+- **픽셀 아트 미학**: 향수를 불러일으키는 비주얼 스타일
+- **모션 디자인**: 부드러운 애니메이션과 전환 효과
+- **인터랙티브 스토리텔링**: 사용자 주도의 내러티브 경험
+- **캐릭터 중심 경험**: 호랑이 문어의 여정에 집중
 
-## 🤝 Contributing
+## 🎮 게임 플레이
 
-Contributions, issues, and feature requests are welcome!
+사용자는 호랑이 문어와 함께 다양한 장면을 탐험하며:
+- 추억을 수집하고
+- 미니게임을 즐기고
+- 감정을 기록하며
+- 특별한 보상을 획득할 수 있습니다
 
-## 📝 License
+## 🤝 기여하기
 
-This project is [MIT](./LICENSE) licensed.
+기여, 이슈 제보, 기능 요청을 환영합니다!
 
-## 👤 Author
+## 📝 라이선스
+
+이 프로젝트는 [MIT](./LICENSE) 라이선스를 따릅니다.
+
+## 👤 제작자
 
 **ziziziwon**
 
 ---
 
-Made with ❤️ for Tiger Octo's Adventure
+❤️를 담아 호랑이 문어의 모험을 위해 제작되었습니다
