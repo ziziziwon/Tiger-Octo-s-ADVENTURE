@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
+import LandingPage from './components/LandingPage';
+import GamePage from './components/GamePage';
+import GalleryPage from './components/GalleryPage';
+import BehindTheScene from './components/BehindTheScene';
+import InviteScene from './components/InviteScene';
+import MemoryStage from './components/MemoryStage';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/game" element={<GamePage />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/behind" element={<BehindTheScene />} />
+        <Route path="/invite" element={<InviteScene />} />
+        <Route path="/memory-stage" element={<MemoryStage />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
+

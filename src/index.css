@@ -1,13 +1,264 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Tailwind Base Layer - 갈무리 폰트 강제 적용 ===== */
+@layer base {
+  html {
+    font-family: 'Galmuri11', 'Galmuri9', 'Press Start 2P', monospace;
+  }
+  
+  body {
+    font-family: 'Galmuri11', 'Galmuri9', 'Press Start 2P', monospace;
+  }
+  
+  * {
+    font-family: 'Galmuri11', 'Galmuri9', 'Press Start 2P', monospace;
+  }
+  
+  h1, h2, h3, h4, h5, h6, p, span, div, button, input, textarea, select {
+    font-family: 'Galmuri11', 'Galmuri9', 'Press Start 2P', monospace;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ===== 글로벌 스타일 ===== */
+html, body, #root { 
+  height: 100%; 
+  margin: 0;
+  padding: 0;
+  font-family: 'Galmuri11', 'Galmuri9', 'Press Start 2P', monospace;
+}
+
+body {
+  background-color: #FFFDF9;
+}
+
+/* 모든 요소에 갈무리 폰트 강제 적용 */
+* {
+  font-family: 'Galmuri11', 'Galmuri9', 'Press Start 2P', monospace !important;
+}
+
+/* 픽셀 폰트는 그대로 유지 */
+.font-pixel {
+  font-family: 'Press Start 2P', cursive !important;
+}
+
+/* font-sans도 갈무리로 오버라이드 */
+@layer utilities {
+  .font-sans {
+    font-family: 'Galmuri11', 'Galmuri9', 'Press Start 2P', monospace !important;
+  }
+}
+
+/* ===== 픽셀풍 배경 ===== */
+.pixel-bg {
+  background: linear-gradient(
+    180deg,
+    #ACD9FF 0%,
+    #FFB7C5 50%,
+    #DDF6F4 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+/* 픽셀 그리드 효과 */
+.pixel-grid::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.03) 0px,
+      rgba(0, 0, 0, 0.03) 1px,
+      transparent 1px,
+      transparent 8px
+    );
+  pointer-events: none;
+}
+
+/* ===== 픽셀 버튼 스타일 ===== */
+@layer components {
+  .pixel-btn {
+    @apply font-pixel text-sm px-6 py-3 bg-tiger text-white relative;
+    box-shadow: 
+      4px 4px 0 rgba(0, 0, 0, 0.2),
+      inset 2px 2px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.1s ease;
+    border: 3px solid #000;
+    image-rendering: pixelated;
+  }
+  
+  .pixel-btn:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 
+      2px 2px 0 rgba(0, 0, 0, 0.2),
+      inset 2px 2px 0 rgba(255, 255, 255, 0.3);
+  }
+  
+  .pixel-btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: none;
+  }
+
+  /* 픽셀 카드 */
+  .pixel-card {
+    @apply bg-white border-4 border-black relative;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  /* 대화창 스타일 */
+  .dialog-box {
+    @apply bg-white border-4 border-black p-6 relative;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  .dialog-box::before {
+    content: ">";
+    @apply font-pixel text-tiger absolute left-3 top-5;
+    animation: blink 1s infinite;
+  }
+
+  /* 픽셀 텍스트 그림자 */
+  .pixel-text-shadow {
+    text-shadow: 
+      3px 3px 0 rgba(0, 0, 0, 0.2),
+      4px 4px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  /* 선택지 버튼 */
+  .choice-btn {
+    @apply font-sans font-medium px-8 py-4 bg-cream border-4 border-black relative;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.15);
+    transition: all 0.1s ease;
+  }
+  
+  .choice-btn:hover {
+    @apply bg-tiger text-white;
+    transform: translate(3px, 3px);
+    box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  /* 픽셀 아이콘 스타일 */
+  .pixel-icon {
+    image-rendering: pixelated;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* ===== 애니메이션 ===== */
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes bounce-small {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* 픽셀 구름 애니메이션 */
+@keyframes cloud-drift {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100vw); }
+}
+
+/* 별 반짝임 애니메이션 */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.cloud {
+  animation: cloud-drift 30s linear infinite;
+}
+
+/* 스크롤바 스타일링 (선택사항) */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FCECDD;
+  border: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF9B00;
+  border: 2px solid #000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8800;
+}
+
+/* ===== 씬별 배경 스타일 ===== */
+.scene-home {
+  background: linear-gradient(to bottom, #FFD37F 0%, #FFA07A 50%, #FFB6C1 100%);
+}
+
+.scene-city {
+  background: linear-gradient(to bottom, #87CEEB 0%, #AEE2FF 50%, #B0E0E6 100%);
+}
+
+.scene-rain {
+  background: linear-gradient(to bottom, #778899 0%, #C1B4E1 50%, #9370DB 100%);
+}
+
+.scene-stage {
+  background: linear-gradient(to bottom, #9370DB 0%, #FFB6C1 50%, #FF69B4 100%);
+}
+
+.scene-ending {
+  background: linear-gradient(to bottom, #191970 0%, #4B0082 50%, #8B008B 100%);
+}
+
+/* 픽셀 소품 애니메이션 */
+@keyframes item-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.1); }
+}
+
+.item-hover:hover {
+  animation: item-bounce 0.6s ease-in-out;
+  cursor: pointer;
+}
+
+/* 버스/지하철 아이콘 애니메이션 */
+@keyframes vehicle-slide {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100vw); }
+}
+
+.vehicle-animation {
+  animation: vehicle-slide 15s linear infinite;
+}
+
+/* 무대 조명 효과 */
+.stage-light {
+  animation: pulse 2s ease-in-out infinite;
+  filter: blur(20px);
+}
+
+/* 픽셀 포스터 효과 */
+.pixel-poster {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.3);
 }
